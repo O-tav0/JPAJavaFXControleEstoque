@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="30" vgap="30" fx:controller="br.com.control.TelaClientesController">
+	<Label text="Opções de Clientes"> </Label>
+	
+	<Button text="Cadastro de clientes" GridPane.ColumnIndex = "0" GridPane.rowIndex = "1" onAction="#mostrarTelaCadastroClientes"> </Button>
+	
+	<Button text="Lista de clientes" GridPane.ColumnIndex = "0" GridPane.rowIndex = "2"> </Button>
+	<Button text="Excluir Cliente" GridPane.ColumnIndex = "0" GridPane.rowIndex = "3"> </Button>
+</GridPane>
+

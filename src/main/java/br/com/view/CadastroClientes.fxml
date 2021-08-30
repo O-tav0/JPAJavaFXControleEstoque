@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="10" vgap="30" fx:controller="br.com.control.CadastroClientesController">
+	<Label text="Cadastro de clientes" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="tituloClientes"> </Label>
+	
+	<Label text="Nome: " GridPane.columnIndex="0" GridPane.rowIndex="1"> </Label>
+		<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="campoNomeCliente" ></TextField>
+		
+	<Label text="Idade: " GridPane.columnIndex="0" GridPane.rowIndex="2"> </Label>
+		<TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="campoIdadeCliente"></TextField>
+		
+	<Button text="Cadastrar" GridPane.columnIndex="0" GridPane.rowIndex="3" on> </Button>	
+</GridPane>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.control.TelaInicialController" hgap="30" vgap="30" fx:id="Tela">
+	<Button text="Clientes" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="150" prefHeight="40" onAction="#mostrarTelaClientes"> 
+	</Button>
+	
+	<Button text="Produtos" GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="150" prefHeight="40"> </Button>
+	
+	<Button text="Pedidos" GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="150" prefHeight="40"> </Button>
+</GridPane>
+
