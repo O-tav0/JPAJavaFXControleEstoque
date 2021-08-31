@@ -9,6 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class TelaClientesController {
+	
 	public void mostrarTelaCadastroClientes() throws IOException {
 		Stage cadastroClientesStage = new Stage();
 		//TelaClientes telaCli = new TelaClientes();
@@ -30,5 +31,21 @@ public class TelaClientesController {
 //		URL FXMLTelaClientes = getClass().getResource("/br/com/view/TelaClientes.fxml");
 //		GridPane cenaCliente = FXMLLoader.load(FXMLTelaClientes);
 //		Tela.getChildren().setAll(cenaCliente);
+	}
+	
+	public void mostrarTelaListagemClientes() throws IOException {
+		Stage telaListagemStage = new Stage();
+		
+		String arquivoCSS = getClass().getResource("/br/com/view/TelaClientes.css").toExternalForm();
+		URL arquivoFxml = getClass().getResource("/br/com/view/ListaClientes.fxml");
+		GridPane cenaClientes = FXMLLoader.load(arquivoFxml);
+		
+		Scene cenaListagem = new Scene(cenaClientes, 800, 600);
+		cenaListagem.getStylesheets().add(arquivoCSS);
+		telaListagemStage.setResizable(false);
+		telaListagemStage.setTitle("Listagem de Clientes");
+		telaListagemStage.setScene(cenaListagem);
+		telaListagemStage.show();
+		
 	}
 }

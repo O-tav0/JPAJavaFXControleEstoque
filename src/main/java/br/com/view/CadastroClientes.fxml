@@ -13,6 +13,6 @@
 	<Label text="Idade: " GridPane.columnIndex="0" GridPane.rowIndex="2"> </Label>
 		<TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="campoIdadeCliente"></TextField>
 		
-	<Button text="Cadastrar" GridPane.columnIndex="0" GridPane.rowIndex="3" on> </Button>	
+	<Button text="Cadastrar" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#cadastrarNovoCliente"> </Button>	
 </GridPane>
 
