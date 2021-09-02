@@ -3,13 +3,30 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="30" vgap="30" fx:controller="br.com.control.TelaClientesController">
-	<Label text="Opções de Clientes"> </Label>
+	<Label text="Opções de Clientes" styleClass="tituloClientes" GridPane.ColumnIndex = "10" GridPane.rowIndex = "0"> </Label>
 	
-	<Button text="Cadastro de clientes" GridPane.ColumnIndex = "0" GridPane.rowIndex = "1" onAction="#mostrarTelaCadastroClientes"> </Button>
+	<Button text="Cadastro de clientes" GridPane.ColumnIndex = "10" GridPane.rowIndex = "3" onAction="#mostrarTelaCadastroClientes" minWidth="180" maxWidth="180" minHeight="50" maxHeight="50"> 
+		<graphic>
+		        <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+		          <image>
+		            <Image url="br/com/view/Adicionar.png"/>
+		          </image>
+		        </ImageView>
+	      	</graphic> 
+	</Button>
 	
-	<Button text="Lista de clientes" GridPane.ColumnIndex = "0" GridPane.rowIndex = "2" onAction="#mostrarTelaListagemClientes"> </Button>
+	<Button text="Lista de clientes" GridPane.ColumnIndex = "10" GridPane.rowIndex = "4" onAction="#mostrarTelaListagemClientes" minHeight="50" maxHeight="50" minWidth="180" maxWidth="180"> 
+		<graphic>
+		        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+		          <image>
+		            <Image url="br/com/view/Clientes.png"/>
+		          </image>
+		        </ImageView>
+	      	</graphic> 
+	</Button>
 </GridPane>
 

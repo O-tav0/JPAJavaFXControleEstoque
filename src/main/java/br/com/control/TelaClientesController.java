@@ -43,7 +43,7 @@ public class TelaClientesController {
 		Scene cenaListagem = new Scene(cenaClientes, 800, 600);
 		cenaListagem.getStylesheets().add(arquivoCSS);
 		telaListagemStage.setResizable(false);
-		telaListagemStage.setTitle("Listagem de Clientes");
+		telaListagemStage.setTitle("Listagem de Produtos");
 		telaListagemStage.setScene(cenaListagem);
 		telaListagemStage.show();
 		

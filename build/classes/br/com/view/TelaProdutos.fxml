@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="30" vgap="30" fx:controller="br.com.control.TelaProdutosController">
+	<Label text="Opções de Produtos" styleClass="tituloProdutos" GridPane.ColumnIndex = "10" GridPane.rowIndex = "0"> </Label>
+	
+	<Button text="Cadastro de Produtos" GridPane.ColumnIndex = "10" GridPane.rowIndex = "3" onAction="#mostrarTelaCadastroProdutos" minWidth="180" maxWidth="180" minHeight="50" maxHeight="50"> 
+		<graphic>
+		        <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+		          <image>
+		            <Image url="br/com/view/Adicionar.png"/>
+		          </image>
+		        </ImageView>
+	      	</graphic> 
+	</Button>
+	
+	<Button text="Lista de Produtos" GridPane.ColumnIndex = "10" GridPane.rowIndex = "4" minHeight="50" maxHeight="50" minWidth="180" maxWidth="180" onAction="#mostrarTelaListagemProdutos"> 
+		<graphic>
+		        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+		          <image>
+		            <Image url="br/com/view/Produtos.png"/>
+		          </image>
+		        </ImageView>
+	      	</graphic> 
+	</Button>
+</GridPane>
+

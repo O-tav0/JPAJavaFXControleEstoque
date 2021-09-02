@@ -21,6 +21,10 @@ public class ClienteDAO extends DAO{
 		return query.getResultList();
 	}
 	
+	public Cliente selecionarUm(int codigo) {
+		return em.find(Cliente.class, codigo);
+	}
+	
 	public void deletar(int codigo) {
 		Cliente cli = em.find(Cliente.class, codigo);
 		abrirT();

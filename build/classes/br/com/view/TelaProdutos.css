@@ -1,0 +1,25 @@
+.tituloProdutos {
+	-fx-font-size: 24px;
+	-fx-alignment: center;
+	-fx-text-fill: #363636;
+}
+
+.botaoAdicionar {
+	-fx-background-color: #228B22;
+	-fx-text-fill: #FFF;
+}
+
+.botaoAlterar {
+	-fx-background-color: #1E90FF;
+	-fx-text-fill: #FFF;
+}
+
+
+.botaoExcluir {
+	-fx-background-color: #8B0000;
+	-fx-text-fill: #FFF;
+}
+
+.labelsForm {
+	-fx-margin: 100px;
+}

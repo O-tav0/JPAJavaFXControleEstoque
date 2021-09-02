@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.control.FazerPedidoController" alignment="TOP_CENTER">
+	<VBox spacing= "10"  >
+		<HBox alignment="CENTER">
+			<Label GridPane.rowIndex="0">
+			 <graphic>
+			        <ImageView fitHeight="800" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+			          <image>
+			            <Image url="br/com/view/Pedido.png"/>
+			          </image>
+			        </ImageView>
+	      	</graphic> 
+		</Label>	
+		</HBox>
+		<Label text="Novo Pedido" styleClass="titulo"> </Label>
+		
+		<HBox spacing="5">
+			<Label text="No carrinho: " styleClass="carrinhoItem"> 
+			<graphic>
+			        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+			          <image>
+			            <Image url="br/com/view/carrinho.png"/>
+			          </image>
+			        </ImageView>
+	      	</graphic> 
+			</Label>
+			<Label fx:id="labelQtdCarrinho" text="0" alignment="CENTER" styleClass="carrinhoItem"> </Label>	
+		</HBox>
+		<HBox>
+			<Label text="Valor: " alignment="CENTER" styleClass="carrinho"> </Label>	
+			<Label fx:id="labelTotalCarrinho" text="0" alignment="CENTER" styleClass="carrinho"> </Label>	
+		</HBox>
+		<HBox spacing="1">
+			<Label text="Escolha o cliente: "> </Label>
+			<TextField fx:id="idClientePedido" maxWidth="50"> </TextField> 
+		</HBox>
+			
+		<HBox spacing="13">
+			<Label text="Id do produto: "> </Label>
+			<TextField fx:id="idProdutoPedido" maxWidth="50"> </TextField>
+			<Label text="Qtde: "> </Label>
+			<TextField fx:id="qtdProd" maxWidth="50"> </TextField>
+			<Button text="Adicionar Item" onAction="#adicionarItemsPedido" styleClass="botaoAdicionar"> 
+				<graphic>
+			        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+			          <image>
+			            <Image url="br/com/view/Adicionar.png"/>
+			          </image>
+			        </ImageView>
+	      		</graphic> 
+			</Button>
+		</HBox>
+		<Button text="Finalizar pedido" onAction="#realizarPedido" maxWidth="400" styleClass="botaoFinalizar"> </Button>
+	</VBox>
+</GridPane>
+

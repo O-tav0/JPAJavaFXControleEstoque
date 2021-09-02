@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="5" vgap="30" fx:controller="br.com.control.CadastroProdutosController" alignment="TOP_CENTER">
+	<VBox GridPane.rowIndex="0" spacing="10" alignment="CENTER">
+		<Label text="Cadastro de Produtos" styleClass="tituloProdutos"> </Label>
+		<Label styleClass="tituloProdutos"> 
+		<graphic>
+			        <ImageView fitHeight="800" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+			          <image>
+			            <Image url="br/com/view/ProdutosIcone.png"/>
+			          </image>
+			        </ImageView>
+	      	</graphic> 
+		</Label>
+		<HBox GridPane.ColumnIndex="6" spacing="10">
+			<Label text="Nome:"  styleClass="labelsForm"> </Label>
+			<TextField  fx:id="campoNomeProd" minWidth ="190" maxWidth="190"></TextField>
+		</HBox>
+		<HBox spacing="14">
+			<Label text="Valor:"> </Label>
+			<TextField fx:id="campoValorProd" maxWidth="60"></TextField>
+		</HBox>
+			
+		<Button text="Cadastrar" onAction="#cadastrarNovoProduto" styleClass="botaoAdicionar" maxWidth="240"> </Button>	
+	</VBox>
+</GridPane>
+

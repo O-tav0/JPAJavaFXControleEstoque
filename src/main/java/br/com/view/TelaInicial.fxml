@@ -2,13 +2,40 @@
 
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.control.TelaInicialController" hgap="30" vgap="30" fx:id="Tela">
-	<Button text="Clientes" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="150" prefHeight="40" onAction="#mostrarTelaClientes"> 
-	</Button>
 	
-	<Button text="Produtos" GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="150" prefHeight="40"> </Button>
 	
-	<Button text="Pedidos" GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="150" prefHeight="40"> </Button>
+		<Button text="Clientes" GridPane.ColumnIndex="10" GridPane.rowIndex="3" prefWidth="150" prefHeight="40" onAction="#mostrarTelaClientes" GridPane.halignment="CENTER" styleClass="botaoMenu">
+			<graphic>
+		        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+		          <image>
+		            <Image url="br/com/view/Clientes.png"/>
+		          </image>
+		        </ImageView>
+	      	</graphic> 
+		</Button>
+		
+		<Button text="Produtos" GridPane.columnIndex="10" GridPane.rowIndex="5" prefWidth="150" prefHeight="40" styleClass="botaoMenu" onAction="#mostrarTelaProdutos"> 
+			<graphic>
+		        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+		          <image>
+		            <Image url="br/com/view/Produtos.png"/>
+		          </image>
+		        </ImageView>
+	      	</graphic> 
+		</Button>
+		
+		<Button text="Pedidos" GridPane.columnIndex="10" GridPane.rowIndex="7" prefWidth="150" prefHeight="40" styleClass="botaoMenu" onAction="#mostrarTelaPedido"> 
+			<graphic>
+		        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+		          <image>
+		            <Image url="br/com/view/Pedidos.png"/>
+		          </image>
+		        </ImageView>
+	      	</graphic> 
+		</Button>
+	
 </GridPane>
 

@@ -4,12 +4,9 @@
 	-fx-text-fill: #363636;
 }
 
-.principal {
-	
-}
-
-.colunasTabela {
-
+.botaoAdicionar {
+	-fx-background-color: #228B22;
+	-fx-text-fill: #FFF;
 }
 
 .botaoAlterar {
@@ -23,6 +20,6 @@
 	-fx-text-fill: #FFF;
 }
 
-#tabelaCli {
-	
+.labelsForm {
+	-fx-margin: 100px;
 }

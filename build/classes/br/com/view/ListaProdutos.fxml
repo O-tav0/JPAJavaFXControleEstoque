@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.control.ListaProdutosController" vgap="0" hgap="1" styleClass="principal">
+    <VBox alignment="CENTER">  
+    <Label text="Lista de Produtos" styleClass="tituloProdutos" GridPane.rowIndex="0" > </Label>
+	
+	<TableView fx:id="tabelaProd" GridPane.ColumnIndex="0" GridPane.rowIndex="2" minWidth="800" maxWidth="800">
+		<columnResizePolicy>
+	    	<TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+	    </columnResizePolicy>
+        <columns>
+            <TableColumn text="Código" fx:id="colunaCodigo" styleClass="colunasTabela"></TableColumn>
+            <TableColumn text="Nome" fx:id="colunaNome" styleClass="colunasTabela"></TableColumn>
+            <TableColumn text="Valor(R$)" fx:id="colunaValor" styleClass="colunasTabela"></TableColumn>
+        </columns>
+    </TableView>
+    
+    		<HBox>
+	    		<VBox GridPane.rowIndex="4" GridPane.ColumnIndex="0" spacing="10">
+		    		<Label text="Excluir Produto" styleClass="tituloProdutos"> </Label>
+		    		<Label text="Id para excluir"> </Label>
+	    		<HBox spacing="10">
+			    	<TextField fx:id="idDeletarProduto" maxWidth="50"> </TextField>
+			    	<Button text="Excluir" styleClass="botaoExcluir" onAction="#deletarProduto"> </Button>
+	    		</HBox> 
+	    		</VBox>
+	    	
+	    		<Pane HBox.hgrow="ALWAYS" />
+	    		<VBox GridPane.rowIndex="5" GridPane.ColumnIndex="1" spacing="10" alignment="CENTER">
+			    		<Label text="Alterar dados do Cliente" styleClass="tituloProdutos"> </Label>
+			    		<HBox spacing="10">
+				    		<Label text="Id para Alterar"> </Label>
+				    		<TextField fx:id="idAlterarProduto" maxWidth="50"> </TextField>
+			    		</HBox>
+			    		<VBox>
+		    		<HBox GridPane.rowIndex="5" GridPane.ColumnIndex="2" spacing="20">
+			    			<Label text="Novo Nome"></Label>
+				    		<TextField fx:id="novoNome" maxWidth="100"> </TextField>
+			    	</HBox>
+			    	
+			    	<HBox GridPane.rowIndex="4" GridPane.ColumnIndex="3" spacing="23">
+			    			<Label text="Novo Valor"></Label>
+				    		<TextField fx:id="novoValor" maxWidth="100"> </TextField>
+			    	</HBox>
+					    	<Button text="Alterar Dados" styleClass="botaoAlterar" onAction="#alterarProdutos" maxWidth="300"> </Button>
+	    		</VBox>
+	    		</VBox>
+	    		
+	    		
+    		</HBox>
+  			
+	    	
+    </VBox>
+</GridPane>
+

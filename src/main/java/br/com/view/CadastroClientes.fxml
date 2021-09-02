@@ -3,16 +3,33 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="10" vgap="30" fx:controller="br.com.control.CadastroClientesController">
-	<Label text="Cadastro de clientes" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="tituloClientes"> </Label>
-	
-	<Label text="Nome: " GridPane.columnIndex="0" GridPane.rowIndex="1"> </Label>
-		<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="campoNomeCliente" ></TextField>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="5" vgap="30" fx:controller="br.com.control.CadastroClientesController" alignment="TOP_CENTER">
+	<VBox GridPane.rowIndex="0" spacing="10" alignment="TOP_CENTER">
+		<Label text="Cadastro de clientes" styleClass="tituloClientes"> </Label>
+		<Label> 
+			<graphic>
+			        <ImageView fitHeight="800" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+			          <image>
+			            <Image url="br/com/view/ClienteIcone.png"/>
+			          </image>
+			        </ImageView>
+	      	</graphic> 
+		</Label>
+		<HBox GridPane.ColumnIndex="6" spacing="10">
+			<Label text="Nome:"  styleClass="labelsForm"> </Label>
+			<TextField  fx:id="campoNomeCliente" minWidth="170" maxWidth="170"></TextField>
+		</HBox>
+		<HBox spacing="12">
+			<Label text="Idade:"> </Label>
+			<TextField fx:id="campoIdadeCliente" maxWidth="30"></TextField>
+		</HBox>
+			
 		
-	<Label text="Idade: " GridPane.columnIndex="0" GridPane.rowIndex="2"> </Label>
-		<TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="campoIdadeCliente"></TextField>
-		
-	<Button text="Cadastrar" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#cadastrarNovoCliente"> </Button>	
+			
+		<Button text="Cadastrar" onAction="#cadastrarNovoCliente" styleClass="botaoAdicionar" maxWidth="220"> </Button>	
+	</VBox>
 </GridPane>
 
