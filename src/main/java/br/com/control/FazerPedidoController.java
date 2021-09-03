@@ -97,6 +97,13 @@ public class FazerPedidoController {
 		
 		pedDAO.inserirPedido(ped);
 		
+		pdao.abrirT();
+		for(int i = 0; i< itensDoPedido.size();i++) {
+			Produto prod = pdao.selecionarUm(itensDoPedido.get(i).getProduto().getId_produto());
+			prod.setQtdEstoque(prod.getQtdEstoque() - itensDoPedido.get(i).getQtde());
+		}
+		pdao.fecharT();
+		
 		idClientePedido.setText("");
 		idProdutoPedido.setText("");
 		qtdProd.setText("");
@@ -106,5 +113,9 @@ public class FazerPedidoController {
 		alert.setHeaderText(null);
 		alert.setContentText("Pedido realizado com sucesso");
 		alert.showAndWait();
+		
+		itensDoPedido.removeAll(itensDoPedido);
+		labelTotalCarrinho.setText("0");
+		labelQtdCarrinho.setText("0");
 	}
 }

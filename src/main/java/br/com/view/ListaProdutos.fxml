@@ -16,6 +16,7 @@
             <TableColumn text="Código" fx:id="colunaCodigo" styleClass="colunasTabela"></TableColumn>
             <TableColumn text="Nome" fx:id="colunaNome" styleClass="colunasTabela"></TableColumn>
             <TableColumn text="Valor(R$)" fx:id="colunaValor" styleClass="colunasTabela"></TableColumn>
+            <TableColumn text="Qtde Estoque" fx:id="colunaEstoque" styleClass="colunasTabela"></TableColumn>
         </columns>
     </TableView>
     

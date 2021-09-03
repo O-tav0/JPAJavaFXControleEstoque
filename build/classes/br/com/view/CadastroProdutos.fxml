@@ -26,6 +26,10 @@
 			<Label text="Valor:"> </Label>
 			<TextField fx:id="campoValorProd" maxWidth="60"></TextField>
 		</HBox>
+		<HBox spacing="14">
+			<Label text="Estoque:"> </Label>
+			<TextField fx:id="campoValorEstoque" maxWidth="80"></TextField>
+		</HBox>
 			
 		<Button text="Cadastrar" onAction="#cadastrarNovoProduto" styleClass="botaoAdicionar" maxWidth="240"> </Button>	
 	</VBox>

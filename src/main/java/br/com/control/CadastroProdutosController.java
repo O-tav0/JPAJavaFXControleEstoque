@@ -12,12 +12,16 @@ public class CadastroProdutosController {
 	@FXML
 	private TextField campoValorProd;
 	
+	@FXML
+	private TextField campoValorEstoque;
+	
 	
 	public void cadastrarNovoProduto() {
 		String nomeDigitado = campoNomeProd.getText();
 		double valorDigitado = Double.valueOf(campoValorProd.getText().replace(",", "."));
+		int estoqueDigitado = Integer.valueOf(campoValorEstoque.getText());
 		
-		Produto prod = new Produto(nomeDigitado, valorDigitado);
+		Produto prod = new Produto(nomeDigitado, valorDigitado, estoqueDigitado);
 		ProdutoDAO pdao =  new ProdutoDAO();
 		pdao.inserirProduto(prod);
 	}

@@ -19,6 +19,9 @@ public class Produto {
 	@Column(name = "valorProduto")
 	private double valorProduto;
 	
+	@Column(name = "qtdEstoque")
+	private int qtdEstoque;
+	
 	Produto() {
 		
 	}
@@ -31,9 +34,10 @@ public class Produto {
 		this.id_produto = id_produto;
 	}
 
-	public Produto(String nome, double valor) {
+	public Produto(String nome, double valor, int estoque) {
 		this.nomeProduto = nome;
 		this.valorProduto = valor;
+		this.qtdEstoque = estoque;
 	}
 
 	public String getNomeProduto() {
@@ -50,6 +54,14 @@ public class Produto {
 
 	public void setValorProduto(double valorProduto) {
 		this.valorProduto = valorProduto;
+	}
+
+	public int getQtdEstoque() {
+		return qtdEstoque;
+	}
+
+	public void setQtdEstoque(int qtdEstoque) {
+		this.qtdEstoque = qtdEstoque;
 	}
 	
 	

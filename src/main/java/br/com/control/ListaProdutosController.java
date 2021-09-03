@@ -32,6 +32,10 @@ public class ListaProdutosController implements Initializable {
 	private TableColumn<ProdutoTabela, Integer> colunaCodigo;
 
 	@FXML
+	private TableColumn<ProdutoTabela, Integer> colunaEstoque;
+	
+	
+	@FXML
 	private TextField idDeletarProduto;
 
 	@FXML
@@ -81,6 +85,7 @@ public class ListaProdutosController implements Initializable {
 		colunaCodigo.setCellValueFactory(new PropertyValueFactory<>("id"));
 		colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
 		colunaValor.setCellValueFactory(new PropertyValueFactory<>("idade"));
+		colunaEstoque.setCellValueFactory(new PropertyValueFactory<>("estoque"));
 
 		tabelaProd.setItems(ObterlistaProdutos());
 	}
@@ -92,7 +97,7 @@ public class ListaProdutosController implements Initializable {
 		for (int i = 0; i < listaDoBanco.size(); i++) {
 			Produto prod = listaDoBanco.get(i);
 			ProdutoTabela prodT = new ProdutoTabela(prod.getId_produto(), prod.getNomeProduto(),
-					prod.getValorProduto());
+					prod.getValorProduto(), prod.getQtdEstoque());
 			list.add(prodT);
 		}
 		return list;
@@ -100,13 +105,15 @@ public class ListaProdutosController implements Initializable {
 
 	public static class ProdutoTabela {
 		private SimpleIntegerProperty id;
+		private SimpleIntegerProperty estoque;
 		private SimpleDoubleProperty valor;
 		private SimpleStringProperty nome;
 
-		public ProdutoTabela(Integer id, String nome, Double valor) {
+		public ProdutoTabela(Integer id, String nome, Double valor, Integer estoque) {
 			this.id = new SimpleIntegerProperty(id);
 			this.nome = new SimpleStringProperty(nome);
 			this.valor = new SimpleDoubleProperty(valor);
+			this.estoque = new SimpleIntegerProperty(estoque);
 		}
 
 		public String getNome() {
@@ -115,6 +122,14 @@ public class ListaProdutosController implements Initializable {
 
 		public int getId() {
 			return id.get();
+		}
+		
+		public int getEstoque() {
+			return estoque.get();
+		}
+		
+		public void setEstoque(SimpleIntegerProperty estoque) {
+			this.estoque = estoque;
 		}
 
 		public void setId(SimpleIntegerProperty id) {
