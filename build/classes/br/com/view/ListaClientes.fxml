@@ -55,6 +55,7 @@
 					</Label>
 					<TextField fx:id="idAlterarCliente" maxWidth="50">
 					</TextField>
+					<Button text="Selecionar Produto" styleClass="botaoCliente" onAction="#selecionarCliente"> </Button>
 				</HBox>
 
 				<HBox GridPane.rowIndex="5" GridPane.ColumnIndex="2"

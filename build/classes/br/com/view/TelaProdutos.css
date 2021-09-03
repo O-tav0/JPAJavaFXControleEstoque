@@ -23,3 +23,8 @@
 .labelsForm {
 	-fx-margin: 100px;
 }
+
+.botaoProduto {
+	-fx-background-color: #228B22;
+	-fx-text-fill: #FFF;
+}

@@ -33,10 +33,9 @@ public class ProdutoDAO extends DAO {
 		fecharEntidade();
 	}
 	
-	public void alterar(int codigo, String novoNome, double novoValor) {
-		Produto prod = em.find(Produto.class, codigo);
-		abrirT();
-		prod.setNomeProduto(novoNome);
+	public void alterar(Produto prod, int codigo, String novoNome, double novoValor) {
+		abrirT();	
+		prod.setNomeProduto(novoNome);		
 		prod.setValorProduto(novoValor);
 		fecharT();
 		fecharEntidade();

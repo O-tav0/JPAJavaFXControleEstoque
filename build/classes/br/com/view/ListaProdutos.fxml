@@ -31,10 +31,11 @@
 	    	
 	    		<Pane HBox.hgrow="ALWAYS" />
 	    		<VBox GridPane.rowIndex="5" GridPane.ColumnIndex="1" spacing="10" alignment="CENTER">
-			    		<Label text="Alterar dados do Cliente" styleClass="tituloProdutos"> </Label>
+			    		<Label text="Alterar dados do Produto" styleClass="tituloProdutos"> </Label>
 			    		<HBox spacing="10">
 				    		<Label text="Id para Alterar"> </Label>
 				    		<TextField fx:id="idAlterarProduto" maxWidth="50"> </TextField>
+				    		<Button text="Selecionar Produto" styleClass="botaoProduto" onAction="#selecionarProduto"> </Button>
 			    		</HBox>
 			    		<VBox>
 		    		<HBox GridPane.rowIndex="5" GridPane.ColumnIndex="2" spacing="20">
@@ -42,7 +43,7 @@
 				    		<TextField fx:id="novoNome" maxWidth="100"> </TextField>
 			    	</HBox>
 			    	
-			    	<HBox GridPane.rowIndex="4" GridPane.ColumnIndex="3" spacing="23">
+			    	<HBox GridPane.rowIndex="4" GridPane.ColumnIndex="3" spacing="24">
 			    			<Label text="Novo Valor"></Label>
 				    		<TextField fx:id="novoValor" maxWidth="100"> </TextField>
 			    	</HBox>

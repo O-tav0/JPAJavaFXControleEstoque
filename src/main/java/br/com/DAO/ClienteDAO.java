@@ -33,8 +33,7 @@ public class ClienteDAO extends DAO{
 		fecharEntidade();
 	}
 	
-	public void alterar(int codigo, String novoNome, int novaIdade) {
-		Cliente cli = em.find(Cliente.class, codigo);
+	public void alterar(Cliente cli ,int codigo, String novoNome, int novaIdade) {
 		abrirT();
 		cli.setIdadeCliente(novaIdade);
 		cli.setNomeCliente(novoNome);

@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import br.com.DAO.ClienteDAO;
+import br.com.DAO.ProdutoDAO;
 import br.com.model.Cliente;
+import br.com.model.Produto;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -51,13 +53,25 @@ public class ListaClientesController implements Initializable {
 		idDeletarCliente.setText("");
 	}
 	
+	public void selecionarCliente() {
+		int codigo = Integer.valueOf(idAlterarCliente.getText());
+		ClienteDAO cdao = new ClienteDAO();
+		Cliente cli = cdao.selecionarUm(codigo);
+
+		novoNome.setText(cli.getNomeCliente());
+		novaIdade.setText(String.valueOf(cli.getIdadeCliente()));
+	}
+	
 	public void alterarCliente() {
 		int codigoAlt = Integer.valueOf(idAlterarCliente.getText());
 		String nomeDigitado = novoNome.getText();
 		Integer idadeDigitada = Integer.valueOf(novaIdade.getText());
 		ClienteDAO cdao = new ClienteDAO();
 		
-		cdao.alterar(codigoAlt, nomeDigitado, idadeDigitada);
+		Cliente cli = cdao.selecionarUm(codigoAlt);
+		
+		cdao.alterar(cli, codigoAlt, nomeDigitado, idadeDigitada);
+		
 		tabelaCli.setItems(ObterlistaClientes());
 		idAlterarCliente.setText("");
 		novoNome.setText("");
